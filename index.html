@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+         body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            background: #1f2933;
+            padding: 20px;
+            border-radius: 15px;
+            width: 280px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .screen input {
+            width: 100%;
+            height: 60px;
+            font-size: 26px;
+            text-align: right;
+            padding-right: 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            margin-bottom: 15px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .buttons button {
+            height: 55px;
+            font-size: 18px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+            transition: 0.2s;
+        }
+
+        .buttons button:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .buttons button:active {
+            transform: scale(0.95);
+        }
+
+        /* Operator buttons */
+        .buttons button:nth-child(4n) {
+            background: linear-gradient(135deg, #36d1dc, #5b86e5);
+        }
+
+        /* Clear button */
+        .buttons button:nth-last-child(2) {
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+        }
+
+        /* Equal button */
+        .buttons button:last-child {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="screen">
+            <input id="display" type="text" disabled>
+        </div>
+        <div class="buttons">
+            <button>9</button>
+            <button>8</button>
+            <button>7</button>
+            <button>+</button>
+
+            <button>6</button>
+            <button>5</button>
+            <button>4</button>
+            <button>-</button>
+
+            <button>3</button>
+            <button>2</button>
+            <button>1</button>
+            <button>*</button>
+
+            <button>0</button>
+            <button>/</button>
+            <button>c</button>
+            <button>=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
